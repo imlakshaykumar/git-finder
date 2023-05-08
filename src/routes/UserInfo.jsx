@@ -89,21 +89,15 @@ export const UserInfo = () => {
                 <Tabs type={ type } setType={ setType } />
             </div>
             {
-                type === "repos" && (
+                type === "repos" ? (
                     <div>
                         <Repos reposInfo={ tabInfo } />
                     </div>
-                )
-            }
-            {
-                type === "received_events" && (
+                ) : type === "received_events" ? (
                     <div>
                         <Events eventsInfo={ tabInfo } />
                     </div>
-                )
-            }
-            {
-                type === "followers" && (
+                ) : type === "followers" && (
                     <div>
                         <Followers followersInfo={ tabInfo } />
                     </div>
