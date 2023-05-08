@@ -1,0 +1,31 @@
+.avatar {
+    width: 70px;
+    border-radius: 50%;
+    display: block;
+    margin-right: 15px;
+}
+
+p:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p:last-child {
+    margin-top: 0;
+}
+
+.eventsMainDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 100%;
+    max-width: 1400px;
+    /* place-items: center; */
+    margin: auto;
+}
+
+.eventsDiv {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
