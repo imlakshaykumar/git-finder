@@ -1,0 +1,37 @@
+.repoMainDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 30px auto;
+    /* margin-bottom: 30px; */
+}
+
+.repoDiv {
+    background-color: #61696b30;
+    border-radius: 5px;
+    padding: 10px;
+    line-height: 1.8;
+}
+
+.repoLink {
+    color: #65b6c9;
+    font-weight: 800;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.repoLink:hover {
+    text-decoration: underline;
+}
+
+.repoDetail {
+    margin: 0;
+    padding-bottom: 10px;
+    font-weight: 900;
+}
+
+.repoDetail>span {
+    margin-right: 1rem;
+}
