@@ -15,7 +15,6 @@ export const UserInfo = () => {
     // console.log(pathname);
 
     let [user, setUser] = useState([]);
-    let [tabInfo, setTabInfo] = useState([]);
     let [type, setType] = useState("repos");
 
     let baseURL = `https://api.github.com/users`;
@@ -26,21 +25,17 @@ export const UserInfo = () => {
         // console.log(res.data);
     }
 
-    async function getTabInfo() {
-        const res = await Axios.get(baseURL + pathname + `/${type}`);
-        // console.log(res.data);
-        setTabInfo([res.data])
-    }
-
     useEffect(() => {
         getUserInfo();
-        getTabInfo();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pathname, type]);
 
     return (
         <div className="userInfoDiv">
-            <button onClick={ () => navigate('/') } className="backBtn">
+            <button onClick={ () => {
+                navigate('/')
+                console.clear();
+            } } className="backBtn">
                 Back
             </button>
             {
@@ -91,15 +86,15 @@ export const UserInfo = () => {
             {
                 type === "repos" ? (
                     <div>
-                        <Repos reposInfo={ tabInfo } />
+                        <Repos type={ type } />
                     </div>
                 ) : type === "received_events" ? (
                     <div>
-                        <Events eventsInfo={ tabInfo } />
+                        <Events type={ type } />
                     </div>
                 ) : type === "followers" && (
                     <div>
-                        <Followers followersInfo={ tabInfo } />
+                        <Followers type={ type } />
                     </div>
                 )
             }
