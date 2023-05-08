@@ -1,0 +1,41 @@
+.contentDiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 3rem;
+    padding: 0 20px;
+}
+
+.userCard {
+    border: 1px solid #a5a1a1;
+    background-color: #08172c;
+    padding: 25px;
+    text-align: center;
+}
+
+.imageBorder {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    max-width: fit-content;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.imageBorder>.userImage {
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+}
+
+.viewBtn {
+    border: none;
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #278EA5;
+    color: #fff;
+    font-weight: 700;
+}

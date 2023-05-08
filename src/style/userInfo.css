@@ -1,0 +1,92 @@
+.userInfoDiv {
+    margin-top: 30px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.userImageDiv {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    max-width: fit-content;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.userImage {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
+.infodiv>h2 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.07rem;
+}
+
+.infodiv>p {
+    color: #359ab1;
+    font-weight: 700;
+}
+
+.infodiv>p>span {
+    color: #fff
+}
+
+.backBtn {
+    border: none;
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #278EA5;
+    color: #fff;
+    font-weight: 700;
+}
+
+.visitBtn {
+    border: none;
+    padding: 5px 15px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #278EA5;
+    color: #fff;
+    font-weight: 700;
+}
+
+.btnBorder {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn {
+    color: #fff;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #278EA5;
+}
