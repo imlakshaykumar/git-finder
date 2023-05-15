@@ -3,10 +3,9 @@ import Axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const Events = ({ type }) => {
+export const Events = ({ type, baseURL }) => {
     // console.log(type);
 
-    let baseURL = "https://api.github.com/users";
     let pathname = window.location.pathname;
     let [events, setEvents] = useState([])
 

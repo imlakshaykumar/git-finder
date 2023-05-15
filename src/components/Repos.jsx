@@ -2,9 +2,9 @@ import Axios from 'axios';
 import { useEffect, useState } from 'react';
 import '../style/repos.css'
 
-export const Repos = ({ type }) => {
+export const Repos = ({ type, baseURL }) => {
     // console.log(type);
-    let baseURL = "https://api.github.com/users";
+
     let pathname = window.location.pathname;
     let [gitrepos, setGitrepos] = useState([])
 

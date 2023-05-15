@@ -2,10 +2,9 @@ import Axios from 'axios'
 import { useEffect, useState } from 'react';
 import { UserContainer } from './usersContainer';
 
-export const Followers = ({ type }) => {
+export const Followers = ({ type, baseURL }) => {
     // console.log(type);
 
-    let baseURL = "https://api.github.com/users";
     let pathname = window.location.pathname;
     let [followers, setFollowers] = useState([])
 
