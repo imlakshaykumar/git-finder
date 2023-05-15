@@ -3,11 +3,10 @@ import '../style/users.css'
 import { useEffect, useState } from 'react';
 import { UserContainer } from '../components/usersContainer';
 
-export const Users = () => {
+export const Users = ({ baseURL }) => {
+
     let [users, setUsers] = useState([]);
     let [searchInput, setSearchInput] = useState("");
-
-    let baseURL = "https://api.github.com/users"
 
     async function AllUsers() {
         const res = await Axios.get(baseURL);
@@ -54,3 +53,5 @@ export const Users = () => {
         </div>
     );
 }
+
+Users.propTypes

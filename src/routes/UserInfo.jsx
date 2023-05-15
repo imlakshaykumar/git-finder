@@ -7,7 +7,7 @@ import { Repos } from '../components/Repos';
 import { Events } from '../components/Events';
 import { Followers } from '../components/followers';
 
-export const UserInfo = () => {
+export const UserInfo = ({ baseURL }) => {
 
     // to navigate back to the all users
     const navigate = useNavigate();
@@ -16,8 +16,6 @@ export const UserInfo = () => {
 
     let [user, setUser] = useState([]);
     let [type, setType] = useState("repos");
-
-    let baseURL = `https://api.github.com/users`;
 
     async function getUserInfo() {
         const res = await Axios.get(baseURL + pathname)
@@ -86,15 +84,15 @@ export const UserInfo = () => {
             {
                 type === "repos" ? (
                     <div>
-                        <Repos type={ type } />
+                        <Repos type={ type } baseURL={ baseURL } />
                     </div>
                 ) : type === "received_events" ? (
                     <div>
-                        <Events type={ type } />
+                        <Events type={ type } baseURL={ baseURL } />
                     </div>
                 ) : type === "followers" && (
                     <div>
-                        <Followers type={ type } />
+                        <Followers type={ type } baseURL={ baseURL } />
                     </div>
                 )
             }
