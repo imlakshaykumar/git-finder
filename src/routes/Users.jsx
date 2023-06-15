@@ -49,7 +49,7 @@ export const Users = ({ baseURL }) => {
                 />
                 <button className='searchBtn' onClick={ handleSearch } >search</button>
             </form>
-            <UserContainer users={ users } />
+            <UserContainer users={ users } baseURL={ baseURL } />
         </div>
     );
 }
