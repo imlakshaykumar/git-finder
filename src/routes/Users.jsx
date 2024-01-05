@@ -10,7 +10,7 @@ export const Users = ({ baseURL }) => {
 
     async function AllUsers() {
         const res = await Axios.get(baseURL);
-        // console.log(data);
+        // console.log(res.data);
         setUsers(res.data);
     }
 
