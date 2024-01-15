@@ -6,7 +6,7 @@ import { UserInfo } from './routes/UserInfo'
 
 function App() {
 
-  const baseURL = import.meta.env.VITE_BASE_URL;
+  const baseURL = import.meta.env.VITE_VERCEL_BASE_URL;
 
   return (
     <>
